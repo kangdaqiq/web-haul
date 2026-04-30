@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Alumni & Total Infaq</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-decor">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <img src="LOGO.png" alt="Logo" class="logo">
+                <h1>Data Infaq <span class="highlight">Haul</span></h1>
+                <h3 style="color: var(--text-primary); margin-bottom: 0.2rem; font-size: 1.4rem; line-height: 1.4;">KH.
+                    Imam Muchtar Ke-11 & Ny. Hj. Halimatus Sa'diyyah</h3>
+                <h4 style="color: var(--success-color); margin-bottom: 1rem; font-size: 1.1rem; font-weight: 600;">
+                    Pondok Pesantren Tarbiyyah Assuniyah Tumijajar</h4>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero Card: Total Donations -->
+            <section class="total-card glass-panel">
+                <div class="total-icon">
+                    <i class="fa-solid fa-wallet"></i>
+                </div>
+                <div class="total-info">
+                    <h2>Total Keseluruhan Infaq</h2>
+                    <div class="amount-container">
+                        <span class="currency">Rp</span>
+                        <span id="total-amount" class="amount">0</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Rekening Infaq Section -->
+            <section class="banks-section">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-building-columns"></i> Rekening Infaq</h2>
+                </div>
+                <div class="banks-grid">
+                    <div class="bank-card glass-panel">
+                        <div class="bank-icon" style="background: #e96b56;">BNI</div>
+                        <div class="bank-details">
+                            <div class="bank-number" onclick="copyToClipboard('rekening-bni', this)"
+                                title="Klik untuk menyalin">
+                                <span id="rekening-bni">0817000399</span>
+                                <i class="fa-regular fa-copy copy-icon"></i>
+                            </div>
+                            <div class="bank-owner">a.n. Ahmad Daqiqi Syahrulloh</div>
+                        </div>
+                    </div>
+                    <div class="bank-card glass-panel">
+                        <div class="bank-icon" style="background: #ea580c;">SeaBank</div>
+                        <div class="bank-details">
+                            <div class="bank-number" onclick="copyToClipboard('rekening-seabank', this)"
+                                title="Klik untuk menyalin">
+                                <span id="rekening-seabank">901445578809</span>
+                                <i class="fa-regular fa-copy copy-icon"></i>
+                            </div>
+                            <div class="bank-owner">a.n. Ahmad Daqiqi Syahrulloh</div>
+                        </div>
+                    </div>
+                    <div class="bank-card glass-panel">
+                        <div class="bank-icon" style="background: #3b82f6;">DANA</div>
+                        <div class="bank-details">
+                            <div class="bank-number" onclick="copyToClipboard('rekening-dana', this)"
+                                title="Klik untuk menyalin">
+                                <span id="rekening-dana">081524824563</span>
+                                <i class="fa-regular fa-copy copy-icon"></i>
+                            </div>
+                            <div class="bank-owner">a.n. Ahmad Daqiqi Syahrulloh</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Confirmation Announcement -->
+                <div class="confirmation-notice glass-panel"
+                    style="margin-top: 2rem; padding: 1.5rem; text-align: center; border-left: 4px solid var(--accent-color);">
+                    <h3 style="color: var(--text-primary); margin-bottom: 0.5rem; font-size: 1.1rem;">
+                        <i class="fa-solid fa-circle-check" style="color: var(--success-color);"></i> Konfirmasi
+                        Transfer Infaq
+                    </h3>
+                    <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">Bagi alumni yang telah melakukan
+                        transfer, mohon untuk dapat menghubungi panitia guna melakukan konfirmasi beserta bukti transfer
+                        melalui WhatsApp.</p>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <a href="https://wa.me/6281524824563?text=Assalamu'alaikum,%20saya%20ingin%20mengonfirmasi%20transfer%20infaq%20Haul%20atas%20nama:%20"
+                            target="_blank" class="wa-btn">
+                            <i class="fa-brands fa-whatsapp"></i> Konfirmasi Sekarang
+                        </a>
+                        <div style="margin-top: 0.8rem; font-size: 0.95rem; color: var(--text-secondary);">
+                            atau WA ke: <strong style="color: var(--text-primary);">0815-2482-4563</strong>
+                        </div>
+                    </div>
+
+                    <p style="font-weight: 600; color: var(--success-color); font-size: 1.05rem;">Terima kasih atas
+                        partisipasi dan kontribusi para alumni. Semoga selalu dilimpahkan rezeki yang barokah, Amiin Ya
+                        Robbal 'alamiin.</p>
+                </div>
+            </section>
+
+            <!-- Table/List of Donors -->
+            <section class="donors-section">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-users"></i> Daftar Alumni Terbaru</h2>
+                    <div class="search-box">
+                        <i class="fa-solid fa-search"></i>
+                        <input type="text" id="search-input" placeholder="Cari nama alumni...">
+                    </div>
+                </div>
+
+                <div class="donors-list glass-panel">
+                    <div class="donors-header">
+                        <div class="col-name">Nama Alumni</div>
+                        <div class="col-date">Tanggal</div>
+                        <div class="col-amount">Nominal</div>
+                    </div>
+                    <div id="donors-container" class="donors-container">
+                        <!-- Loading State -->
+                        <div class="loading-state">
+                            <i class="fa-solid fa-circle-notch fa-spin"></i>
+                            <p>Memuat data dari Spreadsheet...</p>
+                        </div>
+                        <!-- Donors will be injected here via JS -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="current-year"></span> Sistem Infaq. Dibuat dengan <i class="fa-solid fa-heart"
+                    style="color: #ff4757;"></i></p>
+        </footer>
+    </div>
+
+    <!-- PapaParse for parsing CSV from Google Sheets -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
